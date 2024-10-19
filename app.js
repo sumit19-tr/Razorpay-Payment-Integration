@@ -8,8 +8,8 @@ const port = process.env.PORT || 5000 ;
 const cors = require('cors');
 app.use(cors());
 
-let dotenv = require("dotenv");
-dotenv.config();
+// let dotenv = require("dotenv");
+// dotenv.c
 
 //* Available Route 
 app.get('/', (req, res) => {
