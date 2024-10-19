@@ -1,7 +1,10 @@
+let dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const app = express();
 const db = require('./db');
-const port = 5000;
+const port = process.env.PORT || 5000 ;
 const cors = require('cors');
 app.use(cors());
 
@@ -15,8 +18,6 @@ app.get('/', (req, res) => {
 
 const PaymentController = require('./Controller/PaymentController');
 app.use('/api/payment',PaymentController);
-
-
 
 app.listen(port,() => {
     console.log(`Example app listening at http://localhost:${port}`);
