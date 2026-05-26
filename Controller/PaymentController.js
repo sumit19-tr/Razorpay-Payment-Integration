@@ -22,7 +22,7 @@ PaymentRouter.post('/order', (req, res) => {
 
     try {
         const options = {
-            amount: Number(amount * 100),
+            amount: Math.round(Number(amount) * 100),
             currency: "INR",
             receipt: crypto.randomBytes(10).toString("hex"),
         }
