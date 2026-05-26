@@ -3,8 +3,6 @@ const Razorpay = require("razorpay");
 const crypto = require('crypto');
 const bodyParser = require("body-parser");//to post call
 
-
-
 let dotenv = require("dotenv");
 const payment = require('../models/payment');
 dotenv.config();
@@ -79,7 +77,7 @@ PaymentRouter.post('/verify', async (req, res) => {
            // Redirect to the given URL with query parameters
         //    const status = "ordered";
         //    const redirectUrl = `http://localhost:3000/viewBooking?status=${status}&ORDERID=${razorpay_order_id}&date=${Date.now()}&PAYMENTID=${razorpay_payment_id}`;
-        //    res.redirect(redirectUrl);
+        //    res.redirect(redirectUrl);    
 
             // Send Message 
             res.json({
