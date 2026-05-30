@@ -12,9 +12,11 @@ PaymentRouter.use(bodyParser.urlencoded({ extended: true }));
 PaymentRouter.use(bodyParser.json());
 
 const razorpayInstance = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
+    key_id: process.env.RAZORPAY_KEY_ID,    
     key_secret: process.env.RAZORPAY_SECRET
 });
+
+console.log("RAZORPAY_KEY_ID:", process.env.RAZORPAY_KEY_ID);
 
 // ROUTE 1 : Create Order Api Using POST Method http://localhost:5000/api/payment/order
 PaymentRouter.post('/order', (req, res) => {
